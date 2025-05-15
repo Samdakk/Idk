@@ -195,11 +195,14 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 body, html {
   user-select: none;
 }
+.skill-card, .project-card, .cube-container, .custom-cursor, .cursor-dot, .scroll-indicator, .particles, .particle, .progress-bar, .progress-fill, .typing-effect {
+  user-select: auto;
+}
+nav.fixed {
+  z-index: 1000;
+  pointer-events: auto;
+}
 .scroll-indicator {
-  nav.fixed {
-    z-index: 1000;
-    pointer-events: auto;
-  }
   animation: bounce 2s infinite;
 }
 @keyframes bounce {
@@ -309,7 +312,24 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 .skill-front .skill-flip-btn {
   margin-top: auto;
   align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.15);
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
 }
+.skill-front .skill-flip-btn:hover {
+  background: linear-gradient(90deg, #8b5cf6, #6366f1);
+  box-shadow: 0 4px 16px rgba(99,102,241,0.25);
+  transform: translateY(-2px) scale(1.04);
+}
 .skill-back .skill-flip-btn {
   margin-top: auto;
   align-self: center;
@@ -2194,4 +2214,3 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   margin-top: auto;
   align-self: center;
 }
-.skill-back .
