@@ -202,6 +202,9 @@ nav.fixed {
   z-index: 1000;
   pointer-events: auto;
 }
+nav.fixed ~ * {
+  pointer-events: auto;
+}
 .scroll-indicator {
   animation: bounce 2s infinite;
 }
