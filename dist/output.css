@@ -1623,3 +1623,24 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 } 
+
+nav {
+    z-index: 1000; /* Asegura que el navbar esté sobre otros elementos */
+    pointer-events: auto; /* Permite interacciones solo en el navbar */
+}
+
+nav .bg-white {
+    height: auto; /* Asegúrate de que no tenga un tamaño excesivo */
+    overflow: hidden; /* Evita problemas de desbordamiento */
+}
+
+nav.fixed {
+    max-width: 100%; /* Evita que el navbar se desborde del viewport */
+}
+
+@media (min-width: 768px) {
+    nav {
+        top: 6px; /* Corrige la posición superior en pantallas grandes */
+        bottom: auto;
+    }
+}
